@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.osf.trans.mapper.TransMapper">
+	<select id="getTransList" resultType="trans">
+		select trans_result,rank() over(order by trans_count desc) from trans  
+	</select>
+	<select id="findTrans" resultType="trans">
+		select * from trans
+		where trans_source = #{transSource} and trans_target=#{transTarget} and trans_text=#{transText}
+	</select>
+	<insert id="insertTrans">
+		insert into trans(trans_num,trans_text,trans_result,trans_source,trans_target
+		<if test="transError!=null">,trans_error</if>
+		)
+		values(seq_trans_num.nextval,#{transText},#{transResult},#{transSource},#{transTarget}
+		<if test="transError!=null">,#{transError}</if>
+		)
+	</insert>
+	<update id="plusCount">
+		update trans
+		set trans_count = trans_count+1
+		where trans_num = #{transNum}
+	</update>
+</mapper>
