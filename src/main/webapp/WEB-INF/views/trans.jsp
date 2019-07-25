@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page import="java.util.*"%>
-<% HashMap<String,String> codeConf = new HashMap<String,String>();
-codeConf.put("1","한국어");
-codeConf.put("2","국어");
-%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,8 +43,7 @@ codeConf.put("2","국어");
 				<th colspan="2"><textarea rows=10 cols=25 id="transResult"></textarea></th>
 			</tr>
 		</table>
-		<button type="button" class="btn btn-outline-primary" onclick="trans()"><b>번역하기</b></button>
-
+		<button type="button" class="btn btn-primary" onclick="trans()"><b>번역하기</b></button>
 	</div>
 <br><br><br>
  <table class="table table-striped table-bordered table-hover" style="width:80%; height:600px; margin:auto;">
@@ -105,8 +100,6 @@ codeConf.put("2","국어");
 				source.value = '영어';
 			}
 		}
-		
-		function
 		
 		window.onload = function() {
 			var rank = new Array();

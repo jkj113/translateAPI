@@ -42,12 +42,18 @@ textarea{
 		resize:none;
 }
 
-button{
-	width: 380px;
+.btn{
+	width: 370px;
+	font-family:'Sunflower', sans-serif;
 	font-size:20px;
 }
 
 .dataTable{
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.table{
+	font-family:'Sunflower', sans-serif;
+	font-size:20px;
 }
