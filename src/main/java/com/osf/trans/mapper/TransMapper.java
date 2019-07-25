@@ -10,4 +10,5 @@ public interface TransMapper {
 	public TransVO findTrans(TransVO trans);
 	public Integer plusCount(Integer transNum);
 	public List<TransVO> getTransList();
+	public List<TransVO> getTrans();
 }

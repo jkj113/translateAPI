@@ -6,6 +6,9 @@
 	<select id="getTransList" resultType="trans">
 		select trans_result,rank() over(order by trans_count desc) from trans  
 	</select>
+	<select id="getTrans" resultType="trans">
+	select * from trans
+	</select>
 	<select id="findTrans" resultType="trans">
 		select * from trans
 		where trans_source = #{transSource} and trans_target=#{transTarget} and trans_text=#{transText}

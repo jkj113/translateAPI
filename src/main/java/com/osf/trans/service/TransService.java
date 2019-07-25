@@ -9,4 +9,5 @@ public interface TransService {
 	public Object insertTrans(TransVO trans);
 	public Object findTrans(TransVO trans);
 	public List<TransVO> getTransList();
+	public List<TransVO> getTrans();
 }

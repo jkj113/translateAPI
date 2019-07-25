@@ -1,6 +1,7 @@
 package com.osf.trans.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -25,8 +26,14 @@ public class TransController {
 	@GetMapping("/trans")
 	public String goToTrans(Model m){
 		m.addAttribute("codes",cs.getCodeList());
+//		List<TransVO> tList = ts.getTrans();
+//		for(int i=0;i<tList.size();i++) {
+//			m.addAttribute("transList",ts.getTrans());			
+//		}
+//		System.out.println(ts.getTrans());
 		return "trans";
 	}
+	
 	@PostMapping(value="/trans",produces = "application/text; charset=utf8")
 	public @ResponseBody Object translation(TransVO trans) {
 		Object getDbResult = ts.findTrans(trans);
@@ -36,8 +43,10 @@ public class TransController {
 		}
 		return ts.insertTrans(trans);
 	}
+	
 	@GetMapping("/rank")
 	public @ResponseBody List<TransVO> getTransList(){
 		return ts.getTransList();
 	}
+	
 }

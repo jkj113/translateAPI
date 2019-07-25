@@ -1,5 +1,53 @@
-select { width: 100px; /* 원하는 너비설정 */ padding: .8em .5em; /* 여백으로 높이 설정 */ font-family: inherit; /* 폰트 상속 */ background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%; /* 네이티브 화살표 대체 */ border: 1px solid #999; border-radius: 0px; /* iOS 둥근모서리 제거 */ -webkit-appearance: none; /* 네이티브 외형 감추기 */ -moz-appearance: none; appearance: none; }
-textarea{overflow:auto; 
-                resize:none; 
-                width:200px; 
-                height:100px; } 
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+
+#trans{
+	margin-top:3%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	text-align:center;
+	width: 800px;
+	height:500px;
+	border: 2px solid #4F3BC2;
+}
+
+#rankTable{
+	margin-top:5%;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Sunflower', sans-serif;
+}
+
+#rankTable #rank{
+	color:#C00E79;
+}
+
+#transTable{
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Sunflower', sans-serif;
+}
+
+select{
+	font-family:'Cute Font', cursive;
+	font-size:25px;
+}
+
+textarea{
+		font-family:'Cute Font', cursive;
+		font-size:20px;
+		min-height:250px;
+		weight:550px;
+		resize:none;
+}
+
+button{
+	width: 380px;
+	font-size:20px;
+}
+
+.dataTable{
+	margin-left:auto;
+	margin-right:auto;
+}

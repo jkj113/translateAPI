@@ -93,4 +93,9 @@ public class TransServiceImpl implements TransService {
 	public List<TransVO> getTransList() {
 		return tm.getTransList();
 	}
+
+	@Override
+	public List<TransVO> getTrans() {
+		return tm.getTrans();
+	}
 }
