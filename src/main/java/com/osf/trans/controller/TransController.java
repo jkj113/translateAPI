@@ -26,6 +26,7 @@ public class TransController {
 	@GetMapping("/trans")
 	public String goToTrans(Model m){
 		m.addAttribute("codes",cs.getCodeList());
+		m.addAttribute("trans",ts.getTrans());
 //		List<TransVO> tList = ts.getTrans();
 //		for(int i=0;i<tList.size();i++) {
 //			m.addAttribute("transList",ts.getTrans());			

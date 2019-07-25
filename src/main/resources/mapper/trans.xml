@@ -7,7 +7,9 @@
 		select trans_result,rank() over(order by trans_count desc) from trans  
 	</select>
 	<select id="getTrans" resultType="trans">
-	select * from trans
+	select t.*, c1.code_language as source_lang, c2.code_language as target_lang from trans t, code c1, code c2
+	where t.trans_source=c1.code_num
+	and t.trans_target=c2.code_num
 	</select>
 	<select id="findTrans" resultType="trans">
 		select * from trans

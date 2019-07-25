@@ -11,4 +11,6 @@ public class TransVO {
 	private Integer transSource;
 	private Integer transTarget;
 	private String transError;
+	private String sourceLang;
+	private String targetLang;
 }

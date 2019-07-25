@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="java.util.*"%>
+<% HashMap<String,String> codeConf = new HashMap<String,String>();
+codeConf.put("1","한국어");
+codeConf.put("2","국어");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +51,7 @@
 
 	</div>
 <br><br><br>
-<!-- 
- <table class="dataTable">
+ <table class="table table-striped table-bordered table-hover" style="width:80%; height:600px; margin:auto;">
       <thead>
          <tr>
             <th style="width: 70px;"scope="col">Target</th>
@@ -57,17 +61,17 @@
          </tr>
       </thead>
       <tbody>
-         <c:forEach var="tl" items="${transList}">
+         <c:forEach var="tl" items="${trans}">
             <tr>
-               <td>${tl.TRANS_SOURCE}</td>
-               <td>${tl.TRANS_TARGET}</td>
-               <td>${tl.TRANS_TEXT}</td>
-               <td>${tl.TRANS_RESULT}</td>
+	            <td>${tl.sourceLang}</td>             
+	            <td>${tl.targetLang}</td>
+	            <td>${tl.transText}</td>
+	            <td>${tl.transResult}</td>
             </tr>
          </c:forEach>
       </tbody>
    </table>
-    -->
+ 
 	<script>
 		function trans() {
 			var source = document.querySelector('#transSource').value;
@@ -90,6 +94,20 @@
 			}
 			xhr.send(param);
 		}
+		
+		function getCodeName() {
+			var source = document.querySelector('.asd');
+			
+			console.log('source value = >' + source.getAttribute('value'));
+			if(source == '1'){
+				source.value = '한국어';
+			}else if(source == '2'){
+				source.value = '영어';
+			}
+		}
+		
+		function
+		
 		window.onload = function() {
 			var rank = new Array();
 			var ranking = document.querySelector('#rank');
@@ -116,6 +134,8 @@
 				ranking.innerHTML = "<h3>" + rank[i] + "<h3>";
 				i++;
 			}, 2000);
+			
+			
 		}
 	</script>
 </body>
