@@ -29,8 +29,8 @@ public class TransServiceImpl implements TransService {
 	
 	@Override
 	public Object insertTrans(TransVO trans) {
-		String clientId = "dXW3zTfKEESoMLS3r5T1";//애플리케이션 클라이언트 아이디값";
-        String clientSecret = "c3SB4MVU7F";//애플리케이션 클라이언트 시크릿값";
+		String clientId = "";//애플리케이션 클라이언트 아이디값";
+        String clientSecret = "";//애플리케이션 클라이언트 시크릿값";
         String source = cs.getCodeByCode(trans.getTransSource()).trim();
         String target = cs.getCodeByCode(trans.getTransTarget()).trim();
         try {

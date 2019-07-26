@@ -90,17 +90,6 @@
 			xhr.send(param);
 		}
 		
-		function getCodeName() {
-			var source = document.querySelector('.asd');
-			
-			console.log('source value = >' + source.getAttribute('value'));
-			if(source == '1'){
-				source.value = '한국어';
-			}else if(source == '2'){
-				source.value = '영어';
-			}
-		}
-		
 		window.onload = function() {
 			var rank = new Array();
 			var ranking = document.querySelector('#rank');
